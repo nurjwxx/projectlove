@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="MainMenu.css">
+        
+    </head> 
+    <body>
+        <div class="container">
+            <div >
+                <h1 class = "header_text">Ты не против стать моей девушкой?
+                </h1>
+            </div>
+            <div class="gif_container">
+                <img src="https://i.pinimg.com/originals/af/d3/9b/afd39b9c107e6884e59e516e89cb7ce6.gif" alt="Cute animated illustration">
+            </div>
+            <div class = "buttons">
+                <button class="btn" id = "yesButton" onclick="nextPage()">ДАА!!!</button>
+                <button class="btn" id="noButton" onmouseover="moveButton()" onclick="moveButton()">нет(</button>
+                <script>
+                    function nextPage() {
+                        window.location.href = "2Main.html";
+                    }
+                    
+                    function moveButton() {
+                        var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth) - 65;
+                        var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight) - 48;
+                        document.getElementById('noButton').style.left = `${x}px`;
+                        document.getElementById('noButton').style.top = `${y}px`;
+                    }
+                </script> 
+            </div>
+        </div>
+       
+    </body> 
+</html>
